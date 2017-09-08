@@ -2,18 +2,17 @@ angular.module('myapp')
 .config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "templates/home.html"
+        templateUrl : "templates/home.html",
+        controller : "HomeCtrl"
     })
-    .when("/red", {
-        templateUrl : "templates/red.html"
-    })
-    .when("/green", {
-        templateUrl : "templates/green.html"
+    .when("/login", {
+        templateUrl : "templates/login.html",
+        controller: "LoginCtrl"
     })
     .when("/blue", {
         templateUrl : "templates/blue.html"
     })
     .otherwise({
-        templateUrl : "templates/home.html"
+        redirectTo: '/'
     });
 });
